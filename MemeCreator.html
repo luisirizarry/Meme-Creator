@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="MemeCreator.css">
+    <!-- A font I liked -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header for page -->
+    <header>
+        <h1>Meme Creator!</h1>
+        <h2>Create Your Memes Below!</h2>
+    </header>
+    <!-- Container for the form -->
+    <section class="meme-form-section">
+        <form action="" id="meme-form">
+            <div>
+                <label for="meme-url">Image URL</label>
+                <input type="text" id="meme-url" placeholder="Insert URL" required>    
+            </div>
+            
+            <div>
+                <label for="text-above">Text On Top</label>
+                <input type="text" id="text-above" placeholder="What Text Do You Want On The Top?" required>
+            </div>
+            
+            <div>
+                <label for="text-below">Text On Bottom</label>
+                <input type="text" id="text-below" placeholder="What Text Do You Want On The Bottom?" required>    
+            </div>
+
+            <button>Submit</button>
+        </form>
+    </section>
+    <!-- Container for the created memes later on -->
+    <section class="meme-section">
+        
+    </section>
+    
+
+    <script src="MemeCreator.js"></script>
+</body>
+</html>

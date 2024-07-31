@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Centers content and sets the background color */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+}
+
+/* Centers header text and adds margin on top */
+header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Centers the form and adds margin on top */
+.meme-form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Aligns form elements vertically and centers them */
+.meme-form-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Adds space below each form element */
+.meme-form-section div {
+    margin-bottom: 15px;
+}
+
+/* Spaces out the form labels */
+.meme-form-section label {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* Styles the input fields with padding and a border */
+.meme-form-section input {
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid rgb(204, 204, 204);
+    outline: none;
+    width: 300px;
+}
+
+/* Each time the user selects the textbox they want, the bottom border appears */
+.meme-form-section input:focus {
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+/* Gives the button a good look, and an effect when hovered over */
+button {
+    padding: 10px 20px;
+    background-color: rgb(76, 175, 80);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(69, 160, 73);
+}
+
+.meme-section {
+    margin-top: 30px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 80%;
+    height: auto;
+}
+
+/* Keeps both text positioned where they should be, while also giving 
+   each letter a border to stand out more */
+.meme-text-top {
+    top: 10px;
+    left: 50%;
+    font-family: "Anton", Arial, sans-serif;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px  black;
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 0 10px;
+}
+
+.meme-text-bottom {
+    bottom: 10px;
+    left: 50%;
+    font-family: "Anton", Arial, sans-serif;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 0 10px;
+}
+
+/* Makes sure the img isnt too large, but also doesn't stretch */
+.meme-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 50%; 
+    height: auto;
+}
+
+.meme-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Since we want an overlay over the div for the meme, use the after  */
+/* Adds a X icon to the meme when hovered over, as well as darkening the img */
+.meme-container::after {
+    content: "\00d7"; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); 
+    color: rgba(255, 255, 255, 0.521); 
+    font-size: 4rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    opacity: 0; 
+    transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.meme-container:hover::after {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.3);
+}
